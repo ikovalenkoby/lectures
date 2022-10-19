@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">  
+  <title>HTML5</title>
+  <meta name="description" Content='Cтраница об HTML5'>   
+</head>
+<body>
+<header>
+  <h1 >HTML5</h1>
+    <div>Логотип, поисковая панель и др. информация   </div> 
+  <nav class="siteNav"> 
+    <a href="1.html">Мета содержимое</a>
+    <a href="2.html">Потоковое содержимое</a>
+  </nav>
+</header>     
+<!-- -------- Боковая панель -------------------- -->
+<aside class="siteAside">
+    <div class="advBlock" id="adv1">
+    Например, 1-й блок для сопутствующей рекламы.
+  </div>
+   
+  <div class="advBlock" id="adv2">
+    Например, 2-й блок для сопутствующей рекламы.
+  </div>  
+</aside>
+ <!-- ----------- Уникальный контент страницы -------------- -->
+<main> 
+  <!-- Делаем разметку для статьи о яблоках -->  
+  <article>   
+    <!-- Собственная шапка -->
+    <header>
+      <!-- Задаем собственный заголовок 2-го уровня -->
+      <h2>Красные или зеленые яблоки?</h2>  
+      <!-- Внутренняя навигация по статье -->
+      <nav>
+        <ul>
+          <li><a href="#redApples">О красных сортах яблок</a></li>
+          <li><a href="#greenApples">О зеленых сортах яблок</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="redApples">
+      <!-- Задаем собственный заголовок 3-го уровня -->
+      <h3>О красных сортах яблок</h3>
+      <p>
+        Не для кого не секрет, что красные сорта яблок...
+      </p>
+    </section>  
+    <!-- ---------- 2-й раздел статьи ----------- -->
+    <section id="greenApples">
+      <!-- Задаем собственный заголовок 3-го уровня -->
+      <h3>О зеленых сортах яблок</h3>
+      <p>
+        Зеленые сорта яблок...
+      </p>
+    </section>        
+    <!-- ---------- 'Подвал' всей статьи ----------------------- -->
+    <footer class="siteFooter">    
+      <p>
+        Дата публикации: <time datetime="2015-05-15 19:00">15 мая</time>
+        </p>
+      <address>
+        Автор: Иванов Иван Иванович<br>
+        Тел. +375-444-44-44 (до 23-00)
+      </address> 
+    </footer>
+  </article>   
+</main>
+<script>
+  for (let elem of document.body.children) {
+    console.log(elem); // DIV, UL, DIV, SCRIPT
+  }
+  // родителем <body> является <html>
+  alert( document.body.parentNode === document.documentElement ); // выведет true
+
+  // после <head> идёт <body>
+  alert( document.head.nextSibling ); // HTMLBodyElement
+
+  // перед <body> находится <head>
+  alert( document.body.previousSibling ); // HTMLHeadElement
+</script>
+<footer >
+  <address>Петр Романовский, Минск, 2016-2099.</address> 
+</footer>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

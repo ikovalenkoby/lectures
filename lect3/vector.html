@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Векторные изображения</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        .red {
+            fill:red;
+        }
+
+        .green {
+            fill:green;
+        }
+
+        svg {
+            border-top: 1px solid gray;
+            height: 96px;
+            width: 96px;
+        }
+
+        div > span {
+          background: url("img/checkbox.svg") top no-repeat;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        iframe {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">Векторные изображения</h1>
+
+<div>
+    <h2>Как картинка через &lt;img&gt;</h2>
+    <img src="img/checkbox.svg" alt="wake up" width="50" class="red">
+</div>
+<div>
+    <h2>Как картинка через &lt;svg&gt;</h2>
+    <svg viewBox="0 0 24 24" class="green">
+        <rect x="3" y="3" rx="2" ry="2"
+               height="18" width="18"/>
+        <path d="M 5.705,11.295 10,15.585 18.295,7.29"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-opacity="1"
+              stroke-miterlimit="4"
+              stroke-dasharray="17.81"
+              stroke-dashoffset="17.81">
+            <animate attributeName="stroke-dashoffset"
+                     to="0"
+                     dur="450ms"
+                     repeatCount="1"
+                     fill="freeze"/>
+        </path>
+    </svg>
+</div>
+<div>
+    <h2>Через css</h2>
+    <span></span>
+</div>
+<div>
+    <h2>Через iframe</h2>
+    <iframe class="red" src="img/checkbox.svg"></iframe>
+</div>
+<div>
+    <h2>Через embed</h2>
+    <embed type="image/svg+xml" src="img/checkbox.svg" class="red" />
+</div>
+<div>
+    <h2>Через object</h2>
+    <object type="image/svg+xml" data="img/checkbox.svg" width="200" height="200" class="red">
+        Your browser does not support object
+    </object>
+</div>
+
+<script src="js/https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js"></script>
+<script src="js/https://cdnjs.cloudflare.com/ajax/libs/svg.js/1.1.0/svg.js"></script>
+<script>var path = document.getElementById('velocity');
+Velocity({
+    elements: path,
+    properties: {strokeDashoffset: 0},
+    options: {duration: 450, easing: 'linear'},
+});
+
+
+//SVG.js
+var checkmarkSVG = SVG(document.getElementById('svg-js-checkmark')).viewbox(0,0,24,24);
+
+checkmarkSVG.rect().attr({
+    'fill': 'dodgerblue',
+    'x': 3,
+    'y': 3,
+    'rx': 2,
+    'ry': 2,
+    'height': 18,
+    'width': 18
+});
+
+var checkmark = checkmarkSVG
+    .path("M 5.705,11.295 10,15.585 18.295,7.29")//'5.705,11.295 10,15.585 18.295,7.29'
+    .attr({
+        'fill': 'none',
+        'stroke': '#ffffff',
+        'stroke-width': 2,
+        'stroke-linecap': "butt",
+        'stroke-linejoin': "miter",
+        'stroke-opacity': 1,
+        'stroke-miterlimit': 4,
+        'stroke-dasharray': 17.80141,
+        'stroke-dashoffset': 17.80141
+    });
+
+function f(x) {
+    return Math.pow(x,4);
+
+    /*
+    var u1 = .65;
+    var u3 = .6;
+    var u0 = 1;
+    var u2 = 0;
+
+    u0*(1-Math.pow(x,3)) + 3*u1*(1-Math.pow(x,2))*x + 3*u2*(1-x)*Math.pow(x,2) + u3*Math.pow(x,3);
+    //*/
+
+}
+
+checkmark.animate({
+    duration: 50,
+    ease: '-'
+})
+    .attr({'stroke-dashoffset': 11.7309 - 1})//+1 is before turning point, -1 is after
+    .after(function() {
+        this.animate({
+            duration: 100,
+            ease: f
+        })
+            .attr({'stroke-dashoffset': 0});
+    });//*/
+
+
+
+
+var morphSVG = SVG(document.getElementById('svg-js-morph')).viewbox(0,0,24,24);
+
+var checkmarkCollapse = morphSVG
+    .polyline("5.705,11.295 10,15.585 18.295,7.29")
+    .attr({
+        'fill': 'none',
+        'stroke-width': 2
+    });
+
+checkmarkCollapse
+    .animate({duration: 450, ease: '-'})
+    .plot('5,12 10,12 19,12');//[[5,12],[10,12],[19,12]]
+</script>
+</body>
+</html>

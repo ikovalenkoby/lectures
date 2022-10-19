@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number</title>
+</head>
+<body>
+<script>
+    let str = "123";
+    console.log(str);
+    console.log(typeof str); // string
+    let num = Number(str); // становится числом 123
+    console.log(str);
+    console.log(typeof num); // number
+    console.log( 'isNaN(NaN)' ); // true
+    console.log( isNaN(NaN) ); // true
+    console.log( 'isNaN("str")' ); // true
+    console.log( isNaN("str") ); // true
+    let num2 = prompt("Enter a number", '');
+    // вернёт true всегда, кроме ситуаций, когда аргумент - Infinity/-Infinity или не число
+    alert( isFinite(num2) );
+
+
+</script>
+</body>
+</html>

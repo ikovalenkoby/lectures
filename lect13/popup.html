@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">  
+  <title>Ввод/вывод в JS</title>
+    <style>
+    /* Оформляем родительский div абзацев */
+    div{
+    width: 550px;
+    height: 550px;
+    margin: auto;   
+    padding: 40px;
+    background-color: #DFDFDF;
+    border-radius: 5px;
+    }
+    /* Это общий стиль абзацев */  
+    p{
+    width: 280px;
+    margin: auto;
+    margin-top: 20px;   
+    padding: 30px;
+    background-color: #55aa55;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #F9F9F9;
+    }
+    /* Это класс 1-го трансформированного абзаца */
+    .p_1{transform: translate(100px);}
+    /* Это класс 2-го трансформированного абзаца */
+    .p_2{transform: translate(-150px, 150px);}   
+    /* Это класс 3-го трансформированного абзаца */
+    .p_3{transform: translate(30px, -100px);}  
+/* Это класс 4-го трансформированного абзаца */
+    .p_4{transform: translateZ(30px);}  
+    </style>    
+</head>
+    
+<body>
+<header>
+  <h1 >HTML5</h1>
+</header>     
+    <div>
+    <p>
+      Простой абзац.
+     
+   <script>
+	  alert('Привет, я - alert ;) <br />Нажмите "ОК", чтобы продолжить!'); //это просто пример alert
+	   confirm('А это уже confirm. Вы поняли разницу?');
+	   prompt('Это уже prompt. Ответь на вопрос: Сколько тебе лет?',100);
+
+	   /*пример вывода на консоль*/
+	   var foo = {baz: "tubular", goo: "rad"}, bar = "baz";
+	   console.log("string",1,true,bar,foo.baz);
+	   
+	   /*пример добавления контента в тело документа*/
+      document.write(foo.baz,"<br /> в том месте где стоит JS. Этот стоит в абзаце" );
+	   document.write("Вывод данных в окно браузера, <br /> в том месте где стоит JS. Этот стоит в абзаце" );
+		</script>
+		</p>
+  </div>
+    
+<footer >
+  <address>Ирина Коваленко, Минск, 2019-2020.</address> 
+</footer>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

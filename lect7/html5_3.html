@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">  
+  <title>HTML5</title>
+  <meta name="description" Content='Cтраница об HTML5'> 
+    
+  <style>
+   /*работа before и after*/
+    /* 
+    div::before, p::before{
+    content: "***";
+    color: red;      
+    }   
+  
+    p::after, div::after{
+    content: "***";
+    color: blue;       
+    }   */
+      
+   /* Подсказку для имени оформим зеленым цветом */
+    input[placeholder="Петрович"]::placeholder{
+    color: green;
+    }       
+    /* Подсказку для описания оформим оранжевым цветом */
+    textarea[placeholder="Кратко о себе"]::placeholder{
+    color: blue;
+    }               
+    /* Выделенный текст элементов подсветим желтым фоном */
+    ::selection{
+    background-color: yellow;
+    }
+     
+    /* Выделенный в полях текст оформим красным цветом */
+    input::selection, textarea::selection{
+    background-color: transparent;
+    color: red;
+    } 
+/*работа с приоритетностью стилей*/
+p.message { color: green !important; }
+p[contenteditable] { color: blue; }   
+.extra p.message { color: orange; 
+      background: linear-gradient(45deg, #EECFBA, #C5DDE8);}
+       
+   p.background_1, p.background_5,  p.background_3, p.background_4{
+    width: 500px;
+    height: 100px;
+    margin: 2em;
+    padding: 10px;
+    }
+       
+    .background_1{
+    background: linear-gradient(90deg, #ff0000 10%, #00ff00 20%, #0000ff 100%);
+    }
+    .background_3{
+    background: linear-gradient(225deg, #000000, #ffffff);
+    }
+    .background_4{
+    background: linear-gradient(to bottom left, #000000, #ffffff);
+    }
+    .background_5{
+    background: linear-gradient(to right, red 20%, orange 20% 40%, 
+    yellow 40% 60%, green 60% 80%, blue 80%);
+    }       
+   .background_1{
+    background: repeating-radial-gradient(20px 40px at 50% 50%, 
+    #fff 2px, #333 30px, #ddd 70px);
+    }
+     
+    .background_2{
+    background: repeating-radial-gradient(60px 30px at 50% 50%, 
+    #fff, #333 100px, #ddd 200px);
+    }
+     
+    .background_3{
+    background: repeating-radial-gradient(300px 200px at 30% 50px, 
+    #fff 20%, #333 70%, #ddd);
+    }   
+      
+      
+      
+      
+      
+      
+      
+      
+  </style>    
+    
+</head>
+<body>
+<header>
+  <h1 >HTML5</h1>
+    </header>  
+   <div>
+    У меня вначале стоят красные звездочки,<br>
+    а в конце синие!
+  </div>
+   
+  <p>
+    Что ты говоришь?<br>
+    У меня, представь, тоже)))
+  </p>
+   
+    <form action="http://localhost/test/php/script_1.php" method="POST">
+     
+    <label for="first_name">Имя: </label> &nbsp; 
+    <input type="text" name="first_name" placeholder="Петрович"><br><br> 
+          
+    <textarea name="message" placeholder="Кратко о себе"></textarea><br><br>
+     
+    <button type="reset">Сброс</button> &nbsp; 
+    <button type="submit" disabled>Отправить</button>
+     
+  </form>
+   
+  <p>Выделенный текст абзаца подсвечивается желтым фоном.</p>
+<div class="extra">   
+    <p class="message" id="introduction" lang="ru" contenteditable>
+  Htmlbook — это бесплатное руководство по HTML и CSS.
+</p>
+    </div>
+ <p class="background_1">
+    Несколько значений указываются через запятую: <br>
+   20px 40px at 50% 50%, #fff 2px, #333 30px, #ddd 70px
+  </p>
+  <p class="background_3">
+   60px 30px at 50% 50%, #fff, #333 100px, #ddd 200px
+  </p>
+   
+  <p class="background_4">
+    300px 200px at 30% 50px, #fff 20%, #333 70%, #ddd
+  </p>
+   
+  <p class="background_5">
+    Небольшая палитра.
+  </p>   
+    
+    
+<footer >
+  <address>Ирина Коваленко, Минск, 2016-2099.</address> 
+</footer>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

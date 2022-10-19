@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">  
+  <title>HTML5</title>
+    <style>
+    input:in-range{
+    outline: 3px;
+    outline-color: green;
+    outline-style: solid; 
+    }
+     
+    /* При выходе за диапазон выделим поле красной рамкой */
+    input:out-of-range{
+    outline: 3px;
+    outline-color: red;
+    outline-style: solid; 
+    }
+        .unvisible{
+       display:none;     
+        } 
+    input:out-of-range + .unvisible{
+       display:block;     
+        }     
+    </style>    
+</head>
+    
+<body>
+ 
+   <form action="http://localhost/test/php/script_1.php" method="POST">
+     
+    <label for="number_field">Введите число от 1 до 10: </label> &nbsp; 
+    <input type="number" min="1" max="10" id="number_field" value="1"> 
+     <div class="unvisible">Добавь к набранному числу 1. </div>
+    <button type="reset">Сброс</button> &nbsp; 
+             
+    <button type="submit" disabled>Отправить</button>
+     
+  </form>
+<footer >
+  <address>Ирина Коваленко, Минск, 2019-2020.</address> 
+</footer>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

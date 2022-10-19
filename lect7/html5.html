@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">  
+  <title>HTML5</title>
+    <style>
+       HTML  P { color: red; }
+        p>span{background-color:blue; }
+        strong+a{color:aqua;}
+        span~em{color:#838320;}
+       span:nth-child(1){background-color:black;}
+       .fr-ls  span:first-child{
+        color: orange;        }
+      .fr-ls  span:last-child{
+        color: greenyellow;        }
+       .fr-ls  span:nth-child(3){color:white;}
+        span:only-child{
+        color: #ccc;      }
+        address{text-decoration:underline;}
+        div span{display:block;
+        margin:10px;}    
+     
+        p:first-letter{background-color:green;
+        color:antiquewhite;}
+        p::first-line{background-color:goldenrod;}
+           #test{background-color: aquamarine;
+        color:black;}
+    /*text-decoration*/    
+            div .span_1{
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #0000FF;
+            background-color: white; }    
+    .span_2{
+    text-decoration-line: overline;
+    text-decoration-style: dotted;
+    text-decoration-color: orange;
+    text-shadow: 2px 2px 5px blue,
+          10px 5px 8px green,
+          20px 10px 15px red;    }     
+     .span_3{
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+    text-decoration-color: rgba(255,0,0,0.7);  }
+      .span_4{
+    text-decoration-line: underline overline;
+    text-decoration-style:  wavy;
+    text-decoration-color: rgb(0,255,0);
+    } 
+    .span_5{
+    text-decoration: underline solid hsl(189.4,100%,50%);
+    } 
+        /*line-height*/
+     
+    header+p{
+    line-height: 2.5em;}
+    .fr-ls{
+    line-height: 2.5;} 
+    div{
+    line-height: 250%;
+    }  
+        
+        .test_width{
+            width:200px;
+            height:200px;
+        }    
+        
+    </style>    
+</head>
+    
+<body>
+<header>
+  <h1 >HTML5</h1>
+</header>     
+    <p>HTML-теги — основа языка HTML. <strong>Теги </strong> <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%B3">( Читать больше)</a> используются для разграничения начала и </p><p>конца элементов в разметке.</p>
+
+<p id="test">    
+    <span>Каждый HTML</span>-<em><span>документ</span></em> состоит из дерева HTML-элементов и текста. Каждый HTML-элемент обозначается начальным (открывающим) и конечным (закрывающим) тегом. Открывающий и закрывающий теги содержат имя тега.</p>
+<p class="fr-ls">
+    <span>Первый дочерний элемент.</span><br>
+    <span>3 дочерний элемент.</span><br>  
+    <span>Последний дочерний элемент.</span>
+  </p>
+   
+  <p>
+    <span>Единственный дочерний элемент.</span>
+      
+  </p>
+    <div class="test_width"> 
+    Свойства min-width и max-width позволяют ограничивать ширину содержимого до определенного диапазона. Значения не могут быть отрицательными. Для min-width значение по умолчанию 0, для max-width — none.
+Свойства не наследуются.
+Ширина формируется путем сложения значений width, padding, margin и border.
+Содержимое блока, если не помещается в заданные размеры, отображается поверх.
+
+    </div>
+<div>
+  <span class="span_1">Текст №1</span> <br>
+    <span class="span_2">Текст №2</span> <br>   
+    <span class="span_3">Текст №3</span> <br>   
+    <span class="span_4">Текст №4</span> <br>   
+    <span class="span_5">Текст №5</span>    
+    </div>  
+    
+<footer >
+  <address>Ирина Коваленко, Минск, 2019-2020.</address> 
+</footer>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
