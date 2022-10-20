@@ -1,0 +1,21 @@
+<svg viewBox="0 0 24 24" height="96px" width="96px" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="3" rx="2" ry="2"
+          height="18" width="18" />
+    <path d="M 5.705,11.295 10,15.585 18.295,7.29"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-opacity="1"
+          stroke-miterlimit="4"
+          stroke-dasharray="17.81"
+          stroke-dashoffset="17.81">
+        <animate attributeName="stroke-dashoffset"
+                 to="0"
+                 dur="450ms"
+                 repeatCount="1"
+                 fill="freeze"/>
+    </path>
+</svg>
+
