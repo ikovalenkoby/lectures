@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Примеры кода для лекции 5.">
     <meta name="keywords" content="Css, простые селекторы">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon.ico">
     <title>Лекция 5</title>
     <style>
@@ -13,35 +14,70 @@
             box-sizing: border-box;
         }
 
+        body {
+            line-height: 25px;
+        }
+
         h1 {
-            text-align: center;
             text-transform: uppercase;
         }
 
+        .text-align {
+            text-align: center;
+        }
+
         a {
-            color: darkgreen;
+            color: #002f9f;
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
         }
+
+        p {
+            text-indent: 20px;
+        }
+
+        p ~ a {
+            color: cadetblue;
+        }
+
+        .book-list {
+            line-height: 30px;
+        }
     </style>
 </head>
 <body>
-<h1>Лекция по CSS</h1>
+<h1 class="text-align">Лекция по CSS</h1>
 <div>Cascading Style Sheets (CSS) — это язык иерархических правил (таблиц стилей (en-US)), используемый для
     представления внешнего вида документа, написанного на HTML или XML (en-US) (включая различные языки XML, такие как
     SVG (en-US) и XHTML). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с
-    использованием других медиа средств.
+    использованием других медиа
+    <a href="#">пример ссылки не соседа абзаца</a>
+
 </div>
 <p>CSS является одним из основных языков свободной веб-разработки, который стандартизован спецификацией W3C. Стандарт
     CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а CSS3, разбитый на
     более мелкие модули, развивается на пути стандартизации.</p>
-<ul>
-    <li>Справочник по CSS Исчерпывающий справочник для опытных веб-разработчиков, описывающий каждое свойство и понятие CSS.</li>
-    <li>Самоучитель по CSS Пошаговое руководство для помощи начинающим программистам CSS. Содержит все необходимые основы.</li>
-    <li>Примеры CSS3 Набор примеров представляющий новейшие технологии CSS в действии: толчок к креативности.</li>
+<a href="#">Просто пример ссылки</a>
+<ul class="book-list">
+    <li>Справочник по CSS Исчерпывающий справочник для опытных веб-разработчиков, описывающий каждое свойство и понятие
+        CSS.
+    </li>
+    <li>Самоучитель по CSS Пошаговое руководство для помощи начинающим программистам CSS. Содержит все необходимые
+        основы.
+    </li>
+    <li>Примеры CSS3 Набор примеров представляющий новейшие технологии CSS в действии: толчок к креативности.
+        <a href="#">Просто пример ссылки 2</a></li>
 </ul>
+<ul class="link-list">
+    <li><a href="css-syntax.html">Синтаксис CSS и HTML</a></li>
+    <li><a href="css-syntax_all_include.html">Синтаксис CSS и HTML - полное включение</a></li>
+    <li><a href="simple-selectors-before.html">Упражнение на простые селекторы</a></li>
+    <li><a href="element-with-class-before.html">Упражнение на работу с классами</a></li>
+    <li><a href="descendant-selector-before.html">Упражнение на комбинированный селектор</a></li>
+</ul>
+
 </body>
 </html>
