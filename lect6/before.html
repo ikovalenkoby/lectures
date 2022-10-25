@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elements before and after</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        html {
+            font-family: sans-serif, Arial;
+            height: 100%;
+            background: lightgray;
+        }
+
+        body {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        /*.styled-checkbox {
+            position: absolute;
+            opacity: 0;
+        }*/
+
+        /*.styled-checkbox + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }*/
+
+        /*.styled-checkbox + label:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+        }*/
+
+        /*.styled-checkbox + label:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+        }*/
+
+        /*.styled-checkbox:hover + label:before {
+            background: #f35429;
+        }*/
+
+        /*.styled-checkbox:focus + label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }*/
+
+        /*.styled-checkbox:checked + label:before {
+            background: #f35429;
+        }*/
+
+        /*.styled-checkbox:disabled + label {
+            color: #b8b8b8;
+            cursor: auto;
+        }*/
+
+        /*.styled-checkbox:disabled + label:before {
+            box-shadow: none;
+            background: #ddd;
+        }*/
+
+       /* .styled-checkbox:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+            transform: rotate(45deg);
+        }*/
+
+        .unstyled {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin: 20px 0;
+        }
+
+        .centered {
+            width: 300px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            color: #4571ec;
+        }
+
+        footer {
+            margin-top: 20vh;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title">Accessible Custom checkboxes with CSS only</h1>
+
+<main>
+    <ul class="unstyled centered">
+        <li>
+            <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+            <label for="styled-checkbox-1">Checkbox</label>
+        </li>
+        <li>
+            <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
+            <label for="styled-checkbox-2">CSS Only</label>
+        </li>
+        <li>
+            <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3" disabled>
+            <label for="styled-checkbox-3">A disabled checkbox</label>
+        </li>
+        <li>
+            <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+            <label for="styled-checkbox-4">Fourth option</label>
+        </li>
+    </ul>
+</main>
+
+<footer>
+    <address>Ирина Коваленко, Минск, 2022.</address>
+</footer>
+</body>
+</html>
