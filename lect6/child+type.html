@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">  
-  <title>HTML5</title>
-  <meta name="description" Content='Cтраница об псевдоклассах nth-child и nth-type'>
-<style>
-    html {
-        font-family: sans-serif;
-    }
+    <meta charset="utf-8">
+    <title>HTML5</title>
+    <meta name="description" Content='Cтраница об псевдоклассах nth-child и nth-type'>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        html {
+            font-family: sans-serif, Arial;
+            height: 100%;
+        }
 
-    span,
-    div em {
-        padding: 5px;
-        border: 1px solid green;
-        display: inline-block;
-        margin-bottom: 3px;
-    }
+        body {
+            height: 100%;
+            min-height: 100%;
+        }
 
-    .first span:nth-child(2n+1),
-    .second span:nth-child(2n+1),
-    .third span:nth-of-type(2n+1) {
-        background-color: lime;
-    }
-</style>
+        span,
+        div em {
+            padding: 5px;
+            border: 1px solid green;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+
+        .first span:nth-child(2n+1),
+        .second span:nth-child(2n+1),
+        .third span:nth-of-type(2n+1) {
+            background-color: lime;
+        }
+
+        footer {
+            margin-top: 20vh;
+        }
+    </style>
 </head>
 <body>
 <h3><code>span:nth-child(2n+1)</code>, БЕЗ элемента
@@ -74,9 +85,9 @@
     <span>Span</span>
     <span>Span!</span>
 </div>
-<footer >
-  <address>Ирина Коваленко, Минск, 2020.</address>
-</footer>  
+<footer>
+    <address>Ирина Коваленко, Минск, 2020.</address>
+</footer>
 </body>
 </html>
 
