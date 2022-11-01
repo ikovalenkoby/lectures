@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture 7. Box model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #3c763d;
+          /*  padding: 15px 20px;*/
+           /* margin: 30px;*/
+            /*border: 10px salmon solid;*/
+           /* width: 100%;*/
+        }
+
+        .child {
+            background-color: #008eff;
+            /*padding: 10px 30px;*/
+            /*margin: 60px;*/
+            /*border: 10px salmon solid;*/
+        }
+
+        .test_width {
+            background-color: #e5922c;
+            width: 200px;
+            /*height: 200px;*/
+           /* margin: 60px;*/
+        }
+
+        .empty {
+            /*margin: 20px;*/
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Box model</h1>
+</header>
+<main>
+    <div class="container">
+        <p class="child">Box model</p>
+    </div>
+    <div class="empty"></div>
+    <div class="test_width">
+        Свойства min-width и max-width позволяют ограничивать ширину содержимого до определенного диапазона. Значения не
+        могут быть отрицательными. Для min-width значение по умолчанию 0, для max-width — none.
+        Свойства не наследуются.
+        Ширина формируется путем сложения значений width, padding, margin и border.
+        Содержимое блока, если не помещается в заданные размеры, отображается поверх.
+
+    </div>
+</main>
+
+
+<footer>
+    <address>Ирина Коваленко, Минск, 2020-2022.</address>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

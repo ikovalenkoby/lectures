@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture 7. Float</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-utilities.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .green {
+            background-color: #8dd09f;
+            border: 5px solid #cb8f06;
+        }
+
+        .box {
+            width: 150px;
+            height: 60px;
+        }
+
+        .nav-pills .nav-link {
+            width: 200px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .tab-pane {
+            border: 2px solid #7e0505;
+        }
+
+        .clear {clear: both;}
+
+        .width-300 {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Float</h1>
+</header>
+<main>
+    <div class="d-flex align-items-start m-lg-4">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#tab1"
+                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">float: none;
+            </button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button"
+                    role="tab" aria-controls="v-pills-profile" aria-selected="false">float: left;
+            </button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#tab3"
+                    type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">float: right;
+            </button>
+            <button class="nav-link" id="v-pills-messages" data-bs-toggle="pill" data-bs-target="#tab4" type="button"
+                    role="tab" aria-controls="v-pills-settings" aria-selected="false">2 float: left;
+            </button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#tab5"
+                    type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">float and clear
+            </button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                 tabindex="0">
+                <div class="green  box">float block</div>
+                <div >Свойство float вводилось для того, чтобы разработчики могли включать изображение, с обтеканием текста вокруг него слева или справа, как это часто используется в газетах.
+
+                    Но разработчики быстро осознали, что можно обтекать всё что угодно, не только изображения, поэтому использование float расширилось, например для вёрстки забавных эффектов таких как drop-caps (буквица).
+
+                    Floats очень часто использовались для создания макетов целых веб-страниц, отображающих несколько колонок информации, обтекаемых так, что колонки располагаются друг за другом (поведение по умолчанию предполагает, что колонки должны располагаются друг за другом, в том же порядке в котором они появляются в источнике). Доступны более новые, лучшие методы и поэтому использование floats для этих целей следует рассматривать как устаревшей техникой (en-US).
+
+                    В этой статье мы сконцентрируемся только на надлежащем использовании floats.</div>
+            </div>
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                <div class="green  box float-left">float block</div>
+                <div >Свойство float вводилось для того, чтобы разработчики могли включать изображение, с обтеканием текста вокруг него слева или справа, как это часто используется в газетах.
+
+                    Но разработчики быстро осознали, что можно обтекать всё что угодно, не только изображения, поэтому использование float расширилось, например для вёрстки забавных эффектов таких как drop-caps (буквица).
+
+                    Floats очень часто использовались для создания макетов целых веб-страниц, отображающих несколько колонок информации, обтекаемых так, что колонки располагаются друг за другом (поведение по умолчанию предполагает, что колонки должны располагаются друг за другом, в том же порядке в котором они появляются в источнике). Доступны более новые, лучшие методы и поэтому использование floats для этих целей следует рассматривать как устаревшей техникой (en-US).
+
+                    В этой статье мы сконцентрируемся только на надлежащем использовании floats.</div>
+            </div>
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                <div class="green  box float-right">float block</div>
+                <div >Свойство float вводилось для того, чтобы разработчики могли включать изображение, с обтеканием текста вокруг него слева или справа, как это часто используется в газетах.
+
+                    Но разработчики быстро осознали, что можно обтекать всё что угодно, не только изображения, поэтому использование float расширилось, например для вёрстки забавных эффектов таких как drop-caps (буквица).
+
+                    Floats очень часто использовались для создания макетов целых веб-страниц, отображающих несколько колонок информации, обтекаемых так, что колонки располагаются друг за другом (поведение по умолчанию предполагает, что колонки должны располагаются друг за другом, в том же порядке в котором они появляются в источнике). Доступны более новые, лучшие методы и поэтому использование floats для этих целей следует рассматривать как устаревшей техникой (en-US).
+
+                    В этой статье мы сконцентрируемся только на надлежащем использовании floats.</div>
+            </div>
+            <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                <div class="green  box float-left">float block</div>
+                <div class="float-left">Свойство float вводилось для того, чтобы разработчики могли включать изображение, с обтеканием текста вокруг него слева или справа, как это часто используется в газетах.
+
+                    Но разработчики быстро осознали, что можно обтекать всё что угодно, не только изображения, поэтому использование float расширилось, например для вёрстки забавных эффектов таких как drop-caps (буквица).
+
+                    Floats очень часто использовались для создания макетов целых веб-страниц, отображающих несколько колонок информации, обтекаемых так, что колонки располагаются друг за другом (поведение по умолчанию предполагает, что колонки должны располагаются друг за другом, в том же порядке в котором они появляются в источнике). Доступны более новые, лучшие методы и поэтому использование floats для этих целей следует рассматривать как устаревшей техникой (en-US).
+
+                    В этой статье мы сконцентрируемся только на надлежащем использовании floats.</div>
+            </div>
+            <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                <div class="green  box float-left">float block</div>
+                <div class="float-left">Свойство float вводилось для того, чтобы разработчики могли включать изображение, с обтеканием текста вокруг него слева или справа, как это часто используется в газетах.
+
+                    Но разработчики быстро осознали, что можно обтекать всё что угодно, не только изображения, поэтому использование float расширилось, например для вёрстки забавных эффектов таких как drop-caps (буквица).
+
+                    Floats очень часто использовались для создания макетов целых веб-страниц, отображающих несколько колонок информации, обтекаемых так, что колонки располагаются друг за другом (поведение по умолчанию предполагает, что колонки должны располагаются друг за другом, в том же порядке в котором они появляются в источнике). Доступны более новые, лучшие методы и поэтому использование floats для этих целей следует рассматривать как устаревшей техникой (en-US).
+
+                    В этой статье мы сконцентрируемся только на надлежащем использовании floats.</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <address>Ирина Коваленко, Минск, 2019-2020.</address>
+</footer>
+</body>
+</html>

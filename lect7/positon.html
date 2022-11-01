@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture 7. Position</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            margin-top: 5em;
+            padding: 10px;
+            border: solid 5px blue;
+        }
+
+        div p:first-of-type {
+            background-color: violet;
+        }
+
+        p {
+            top: 2em;
+            left: 70px;
+            width: 400px;
+            height: 70px;
+            margin: 10px;
+            padding: 1em;
+            border: solid 5px green;
+            background-color: yellow;
+        }
+
+        .fixed {
+            position: fixed;
+
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .sticky {
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>HTML5</h1>
+</header>
+<main>
+    <div>
+        <p></p>
+        <p class="fixed">
+            <br>
+            position: fixed;<br>
+            top: -2em;<br>
+            left: 70px;
+        </p>
+    </div>
+
+    <div>
+        <p></p>
+        <p class="static">
+            position: static;<br>
+            top: -2em;<br>
+            left: 70px;
+        </p>
+    </div>
+
+    <div>
+        <p></p>
+        <p class="relative">
+            position: relative;<br>
+            top: -2em;<br>
+            left: 70px;
+        </p>
+    </div>
+
+    <div>
+        <p></p>
+        <p class="absolute">
+            position: absolute;<br>
+            top: -2em;<br>
+            left: 70px;
+        </p>
+    </div>
+
+
+    <div>
+        <p></p>
+        <p class="sticky">
+            position: sticky;<br>
+            top: -2em;<br>
+            left: 70px;
+        </p>
+    </div>
+</main>
+<footer>
+    <address>Ирина Коваленко, Минск, 2019-2020.</address>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
