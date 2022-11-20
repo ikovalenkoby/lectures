@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Лекция 8</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/bootstrap-utilities.css">
+
+
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body, main {
+      min-height: 100%;
+      height: 100%;
+    }
+
+    * {
+      font-family: Roboto, sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+    }
+
+    ul a {
+      line-height: 1rem;
+      text-decoration: none;
+      color: #282828;
+      background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+      display: block;
+      padding: 15px 10px;
+    }
+
+    ul a:hover, {
+      color: white;
+      background: linear-gradient(bottom right, #3378e8, #32c3e8);
+      background: -webkit-linear-gradient(left top, #3378e8, #32c3e8);
+      background: -o-linear-gradient(bottom right, #3378e8, #32c3e8);
+      background: -moz-linear-gradient(bottom right, #3378e8, #32c3e8);
+    }
+
+    .red {
+      background-color: #b24a50;
+      color: white;
+    }
+
+    .blue {
+      background-color: #3c629b;
+    }
+
+    .yellow {
+      background-color: #ffcd39;
+    }
+
+    .green {
+      background-color: #58a509;
+    }
+
+    .block {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 0;
+    }
+
+    .block:hover {
+      width: 20vw;
+      height: 20vw;
+      transform: rotate(0.5turn);
+      border-radius: 50%;
+      background-color: #58a509;
+
+    }
+
+    .transition-simple {
+      transition: width 0.2s ease-in, transform 0.6s ease-in 0.5s, border-radius 1s, background-color 1s steps(4, end);
+    }
+
+    .hovers-container span {
+      padding-top: 0.1rem;
+      font-size: 23px;
+    }
+
+    .h-700 {
+      min-height: 780px;
+    }
+
+    .column {
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .column span {
+      position: absolute;
+      bottom: -40px;
+      left: 33%;
+      z-index: -1;
+      display: block;
+      width: 25%;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      opacity: 0;
+
+    }
+
+    .column:hover span {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hover1:hover img {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+
+    .hover2 img {
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .hover2:hover img {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+
+    .hover3 img {
+      -webkit-filter: sepia(100%);
+      filter: sepia(100%);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .hover3:hover img {
+      -webkit-filter: sepia(0);
+      filter: sepia(0);
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Лекция 9</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a href="index.html#home">Transform 2D</a></li>
+            <li><a href="index-3d.html#3d">Transform 3D</a></li>
+            <li><a href="index-transition.html#anchor">transition</a></li>
+            <li><a href="index-keyframes.html#anchor">keyframes</a></li>
+            <li><a href="transition-transform.html">Example 1</a></li>
+            <li><a href="space.html">Example 2</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+<main class="mt-4" id="anchor">
+  <section class="container red h-700">
+    <div class="row row-cols-1" id="3d">
+
+      <h1 class="my-5 text-align">
+        Transition
+      </h1>
+      <div>
+        <h2 class="my-2">
+          Use case
+        </h2>
+        <div class="container-cube">
+          <div class="transition-simple block text-align yellow"></div>
+        </div>
+        <div>
+          <h2 class="my-2">
+            Examples
+          </h2>
+          <div class="container">
+            <div class="row row-cols-3 hovers-container">
+              <P class="column hover1">
+                <img src="img/christmas-g57b7ab4ab_640.jpg" class="w-100" alt="Новый год">
+                <span>Hover</span>
+              </P>
+              <P class=" column hover2"><img class="w-100" src="img/christmas-tree-g7dcd7e0cd_640.jpg" alt="Новый год">
+                <span>Hover</span></P>
+              <P class="column hover3"><img class="w-100" src="img/fireworks-gbca775ef3_640.jpg" alt="Новый год">
+                <span>Hover</span></P>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+</main>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

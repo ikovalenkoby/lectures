@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Градиенты</title>
+  <meta name="description" Content='Градиенты'>
+
+  <style>
+
+    p {
+      width: 500px;
+      height: 100px;
+      margin: 2em;
+      padding: 10px;
+    }
+
+    p:nth-child(6) {
+      height: 270px;
+      width: 400px;
+    }
+
+    .diagonal-gradient {
+      background: linear-gradient(to bottom right, blue, pink);
+    }
+
+    .angled-gradient {
+      background: linear-gradient(164deg, blue, pink);
+    }
+
+
+    .background_5 {
+      background: linear-gradient(to right, red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+    }
+
+    .layered-image {
+      background: linear-gradient(to right, transparent, mistyrose),
+      url("img/pumpkin.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .stacked-linear {
+      background:
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    }
+
+    .plaid-gradient {
+      background:
+        repeating-linear-gradient(90deg, transparent, transparent 50px,
+        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
+        transparent 56px, transparent 63px,
+        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
+        transparent 69px, transparent 116px,
+        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+        repeating-linear-gradient(0deg, transparent, transparent 50px,
+        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
+        transparent 56px, transparent 63px,
+        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
+        transparent 69px, transparent 116px,
+        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+        repeating-linear-gradient(-45deg, transparent, transparent 5px,
+        rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
+        repeating-linear-gradient(45deg, transparent, transparent 5px,
+        rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+
+      background:
+        repeating-linear-gradient(90deg, transparent 0 50px,
+        rgba(255, 127, 0, 0.25) 50px 56px,
+        transparent 56px 63px,
+        rgba(255, 127, 0, 0.25) 63px 69px,
+        transparent 69px 116px,
+        rgba(255, 206, 0, 0.25) 116px 166px),
+        repeating-linear-gradient(0deg, transparent 0 50px,
+        rgba(255, 127, 0, 0.25) 50px 56px,
+        transparent 56px 63px,
+        rgba(255, 127, 0, 0.25) 63px 69px,
+        transparent 69px 116px,
+        rgba(255, 206, 0, 0.25) 116px 166px),
+        repeating-linear-gradient(-45deg, transparent 0 5px,
+        rgba(143, 77, 63, 0.25) 5px 10px),
+        repeating-linear-gradient(45deg, transparent 0 5px,
+        rgba(143, 77, 63, 0.25) 5px 10px);
+    }
+
+  </style>
+
+</head>
+<body>
+<header>
+  <h1>Градиенты</h1>
+</header>
+<main>
+  <h2>Использование линейных градиентов</h2>
+
+  <p class="diagonal-gradient">
+    Вы можете даже создать градиент, проходящий диагонально, из угла в угол.: <br>
+    из нижнего левого в правый верхний
+  </p>
+  <p class="angled-gradient">
+    угол - 164
+  </p>
+
+  <p class="background_5">
+    Небольшая палитра.
+  </p>
+
+  <h3>Перекрытие градиентов</h3>
+  <p class="layered-image">
+
+  </p>
+
+  <h3>Наслаивание градиентов</h3>
+  <p class="stacked-linear">
+
+  </p>
+
+  <h3>Наслаивание градиентов</h3>
+  <p class="plaid-gradient">
+
+  </p>
+
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

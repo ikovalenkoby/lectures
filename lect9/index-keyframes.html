@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Лекция 8</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/bootstrap-utilities.css">
+
+
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body, main {
+      min-height: 100%;
+      height: 100%;
+    }
+
+    * {
+      font-family: Roboto, sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+    }
+
+    ul a {
+      line-height: 1rem;
+      text-decoration: none;
+      color: #282828;
+      background: radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+      display: block;
+      padding: 15px 10px;
+    }
+
+    ul a:hover {
+      color: white;
+      background: linear-gradient(bottom right, #3378e8, #32c3e8);
+      background: -webkit-linear-gradient(left top, #3378e8, #32c3e8);
+      background: -o-linear-gradient(bottom right, #3378e8, #32c3e8);
+      background: -moz-linear-gradient(bottom right, #3378e8, #32c3e8);
+    }
+
+    .red {
+      background-color: #b24a50;
+      color: white;
+    }
+
+    .blue {
+      background-color: #3c629b;
+    }
+
+    .yellow {
+      background-color: #ffcd39;
+    }
+
+    .green {
+      background-color: #58a509;
+    }
+
+    .clock {
+      background: #BDD0D7;
+      border-radius: 25px;
+      box-shadow: 6px 6px 0 #ABBABF;
+      height: 200px;
+      width: 200px;
+      position: relative;
+    }
+    .clock-inner {
+      background: #f9f9f9;
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      left: calc(50% - 80px);
+      top: calc(50% - 80px);
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,.3), inset -2px -2px 4px rgba(0,0,0,.3);
+    }
+    .clock-numbers {
+      padding-left: 0;
+      height: 120px;
+      width: 120px;
+      position: absolute;
+      left: calc(50% - 60px);
+      top: calc(50% - 60px);
+      list-style: none;
+      margin: 0;
+    }
+    .clock-numbers li {
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      margin: -10px;
+      position: absolute;
+      text-align: center;
+      font-family: 'Special Elite', cursive;
+      text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+      color: #544E3E;
+      font-weight: bold;
+    }
+    .clock-numbers li:nth-child(1) {
+      left: 50%;
+      top: 0;
+    }
+    .clock-numbers li:nth-child(2) {
+      right: 0;
+      top: 50%;
+    }
+    .clock-numbers li:nth-child(3) {
+      bottom: 0;
+      left: 50%;
+    }
+    .clock-numbers li:nth-child(4) {
+      left: 0;
+      top: 50%;
+    }
+    .clock-minutes {
+      height: 60px;
+      width: 2px;
+      background: #D56851;
+      border-radius: 2px;
+      position: absolute;
+      top: calc(50% - 60px);
+      left: calc(50% - 1px);
+      -webkit-transform-origin: 1px 60px;
+      transform-origin: 1px 60px;
+      -webkit-animation: clock 60s steps(60, end) infinite;
+      -moz-animation: clock 60s steps(60, end) infinite;
+      animation: clock 60s steps(60, end) infinite;
+      box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+    }
+    .clock:hover .clock-minutes{
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+    .clock-minutes:before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D56851;
+      box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+      top: calc(100% - 4px);
+      left: calc(100% - 5px);
+    }
+    @-webkit-keyframes clock {
+      from {-webkit-transform: rotate(0deg);}
+      to {-webkit-transform: rotate(360deg);}
+    }
+    @-moz-keyframes clock {
+      from {-moz-transform: rotate(0deg);}
+      to {-moz-transform: rotate(360deg);}
+    }
+    @-keyframes clock {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    h3 {
+      text-align: center;
+      font-family: 'Special Elite', cursive;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+
+    .hovers-container span {
+      padding-top: 0.1rem;
+      font-size: 23px;
+    }
+
+    .h-700 {
+      min-height: 780px;
+    }
+
+    .column {
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .column span {
+      position: absolute;
+      bottom: -40px;
+      left: 33%;
+      z-index: -1;
+      display: block;
+      width: 25%;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      opacity: 0;
+
+    }
+
+    .column:hover span {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .hover1 {
+      position: relative;
+    }
+
+    .hover1::before {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+      -webkit-transform: skewX(-25deg);
+      transform: skewX(-25deg);
+    }
+
+    .hover1:hover::before {
+      -webkit-animation: shine .75s;
+      animation: shine .75s;
+    }
+
+    @-webkit-keyframes shine {
+      100% {
+        left: 125%;
+      }
+    }
+
+    @keyframes shine {
+      100% {
+        left: 125%;
+      }
+    }
+
+    /* Circle */
+    .hover2 {
+      position: relative;
+    }
+
+    .hover2::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, .2);
+      border-radius: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    .hover2:hover::before {
+      -webkit-animation: circle .75s;
+      animation: circle .75s;
+    }
+
+    @-webkit-keyframes circle {
+      0% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+      }
+    }
+
+    @keyframes circle {
+      0% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Лекция 9</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a href="index.html#home">Transform 2D</a></li>
+            <li><a href="index-3d.html#3d">Transform 3D</a></li>
+            <li><a href="index-transition.html#anchor">transition</a></li>
+            <li><a href="index-keyframes.html#anchor">keyframes</a></li>
+            <li><a href="transition-transform.html">Example 1</a></li>
+            <li><a href="space.html">Example 2</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
+<main class="mt-4" id="anchor">
+  <section class="container red h-700">
+    <div class="row row-cols-1" id="3d">
+
+      <h1 class="my-5 text-align">
+        Animation
+      </h1>
+      <div>
+        <h2 class="my-2">
+          Clock
+        </h2>
+        <div class="container-clock">
+          <div class="clock">
+            <div class="clock-inner">
+              <div class="clock-minutes"></div>
+              <ul class="clock-numbers">
+                <li>XII</li>
+                <li>III</li>
+                <li>VI</li>
+                <li>IX</li>
+              </ul>
+            </div>
+          </div>
+          <h3>hover to pause</h3>
+        </div>
+        <div>
+          <h2 class="my-2">
+            Examples
+          </h2>
+          <div class="container">
+            <div class="row row-cols-2 hovers-container">
+              <P class="column hover1">
+                <img src="img/christmas-g57b7ab4ab_640.jpg" class="w-100" alt="Новый год">
+                <span>Hover</span>
+              </P>
+              <P class=" column hover2"><img class="w-100" src="img/christmas-tree-g7dcd7e0cd_640.jpg" alt="Новый год">
+                <span>Hover</span></P>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+</main>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
